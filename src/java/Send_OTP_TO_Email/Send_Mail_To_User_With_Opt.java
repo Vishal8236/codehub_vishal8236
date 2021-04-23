@@ -52,13 +52,13 @@ public class Send_Mail_To_User_With_Opt extends HttpServlet {
             Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication("vpboss9691@gmail.com","8236879994");//Put your email id and password here
+            return new PasswordAuthentication("abc@gmail.com","password");//Put your email id and password here
             }
             });
             //compose message
             try {
             MimeMessage message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("vpboss9691@gmail.com"));//change accordingly
+            message.setFrom(new InternetAddress("abc@gmail.com"));//change accordingly
             message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
             message.setSubject("Hello");
             message.setText("your otp is - "+OTP);
